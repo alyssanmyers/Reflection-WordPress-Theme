@@ -1,0 +1,1142 @@
+/*
+ * Theme Name: Reflection Film
+ * Theme URI: N/A
+ * Version: 1.0
+ * Description: A custom theme for the thesis film, Reflection
+ * Author: Alyssa Myers
+ * Author URI: https://amyers.art
+*/
+
+/* CSS Document */
+
+.grecaptcha-badge{
+	visibility: collapse !important;  
+	display: none !important;
+}
+
+html
+{
+	height: 100%;
+	overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body
+{
+	min-height: 100%;
+}
+
+html, body
+{
+	margin: 0;
+	font-size: 100%;
+}
+
+/* all links should be black & have no underline */
+a
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+a.plain
+{
+	border-bottom: 1px dotted #4eafaa;
+}
+
+/******************/
+/* MAIN CONTAINER */
+/******************/
+
+/*  This is important for the main page. 
+	It serves at the wrapper for the design 
+	so it extends all the way down to the insta feed. 
+*/
+#wrapper
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+/* nav and main content */
+#container
+{
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#wrapper
+{
+	width: 100%;
+	
+	/* 126px for the footer */
+	min-height: calc(100vh - 200px);
+	height: auto;
+	
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+main
+{
+	width: calc(100vw - 20%);
+	padding: 50px 10%;
+}
+
+/****************/
+/*  NAVIGATION  */
+/****************/
+
+/* navigation area */
+nav
+{
+	width: calc(100% - 100px);
+	height: 100px;
+	margin: 0;
+	padding: 0 50px;
+	background-color: #100011;
+}
+
+/* logo in the nav */
+nav #logo
+{
+	height: 100%;
+	float: left;
+}
+
+/* nav menu */
+nav ul
+{
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	height: 100%;
+	display: table;
+	padding: 0;
+	float: right;
+}
+
+nav ul > div
+{
+	height: 100%;
+}
+
+/* nav menu item */
+nav ul li
+{
+	padding: 0 25px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/* stretch the link */
+nav ul a, a.button
+{
+	position: relative;
+	text-decoration: none;
+	display: block;
+	padding-bottom: 5px;
+	color: #ffffff;
+}
+
+/* add the border, and hide it through a transformation */
+nav ul a:before, a.button:before
+{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: 0;
+	left: 0;
+	background-color: #ffffff;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+nav ul a:hover:before, a.button:hover:before
+{
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+
+/* type styles */
+
+/* menu item type */
+nav, a.button
+{
+	font-size: 0.75em;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+a.button
+{
+	font-weight: bold;
+}
+
+/***************/
+/* Burger Menu */
+/***************
+
+/* menu icon */
+.burger-menu
+{
+	display: none;
+	z-index: 10;
+	float: right;
+	width: 40px;
+	margin-top: 30px;
+	text-align: center;
+	position: fixed;
+	right: 0px;
+}
+
+.burger-menu .close-button
+{
+	position: absolute;
+	display: none;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 30%;
+	margin: 0 auto;
+	top: 35%;
+}
+
+.burger-menu::before
+{
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+.burger-menu:hover
+{
+	cursor: pointer;
+}
+
+.burger-menu ul
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.burger-menu ul li
+{
+	height: calc(40% / 3) !important;
+	width: 25px !important;
+	margin: 0 auto 5px -32px !important;
+	background-color: #ffffff !important;
+	display: block;
+	padding: 0;
+}
+
+.burger-menu ul li:last-child
+{
+	margin: 0 auto;
+}
+
+/****************/
+/* MAIN CONTENT */
+/****************/
+
+/* main content container */
+main
+{
+	height: auto;
+	float: left;
+	position: relative;
+}
+
+/* type styles */
+
+/* intro header */
+main h1
+{
+	font-size: 3em;
+	line-height: 1em;
+	letter-spacing: 0.15em;
+	text-transform: lowercase;
+	font-weight: bold;
+}
+
+/* body paragraph */
+main h2
+{
+	font-size: 1.25em;
+	line-height: 2em;
+	font-weight: normal;
+}
+
+main p
+{
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 1.75em;
+}
+
+ul.laurels
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	margin-top: 2.5%;
+} 
+	
+ul.laurels li
+{
+	display: inline-block;
+	width: 100px;
+	margin: 10px 15px;
+}
+	
+ul.laurels li img
+{
+	width: 100px;
+}
+
+#videoMessage
+{
+	padding-top: 100px;
+}
+
+/****************/
+/*     ABOUT    */
+/****************/
+/*
+main p.body-text
+{
+	font-size: 14px;
+	line-height: 22px;
+}
+*/
+
+main ul.three-across, main ul.side-by-side-left, main ul.side-by-side-right, main ul.side-by-side-right-flipped
+{
+	list-style: none;
+	padding: 0;
+	overflow: hidden;
+	margin: 0;
+}
+
+main ul.side-by-side-left,
+main ul.side-by-side-right,
+main ul.side-by-side-right-flipped
+{
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	margin-bottom: 100px;
+}
+
+main ul.three-across li
+{
+	float: left;
+	width: calc(98% / 3);
+	padding-top: 50%;
+	margin-right: 1%;
+	background-size: cover;
+	background-position: center;
+}
+
+main ul.three-across li:nth-child(3)
+{
+	margin-right: 0;
+}
+
+/* image */
+main ul.side-by-side-left li:first-child,
+main ul.side-by-side-right li:nth-child(2)
+{
+	float: left;
+	width: calc(98% / 3 * 2);
+	padding-top: 60%;
+	background-size: cover;
+	background-position: center;
+}
+
+/* image */
+main ul.side-by-side-right-flipped li:nth-child(2)
+{
+	float: left;
+	width: calc(98% / 3);
+	padding-top: 45%;
+	background-size: cover;
+	background-position: center;
+}
+
+main ul.side-by-side-left li:first-child,
+main ul.side-by-side-right li:first-child,
+main ul.side-by-side-right-flipped li:first-child
+{
+	margin-right: 2%;
+}
+
+/* type */
+main ul.side-by-side-left li:nth-child(2),
+main ul.side-by-side-right li:first-child
+{
+	float: left;
+	width: calc(98% / 3);
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+}
+
+/* type */
+main ul.side-by-side-right-flipped li:first-child
+{
+	float: left;
+	width: calc(98% / 3 * 2);
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+}
+
+main ul.side-by-side-left li:nth-child(2) p.body-text,
+main ul.side-by-side-right li:first-child p.body-text,
+main ul.side-by-side-right-flipped li:first-child p.body-text
+{
+	padding: 2%;
+	margin: 0;
+}
+
+@media all and (max-width: 799px)
+{
+	main ul.side-by-side-left,
+	main ul.side-by-side-right,
+	main ul.side-by-side-right-flipped
+	{
+  		flex-direction: column;
+		margin-bottom: 0;
+	}
+	
+	main ul.side-by-side-right li:first-child,
+	main ul.side-by-side-right-flipped li:first-child
+	{
+		order: 2;
+	}
+	
+	/* image */
+	main ul.side-by-side-left li:first-child,
+	main ul.side-by-side-right li:nth-child(2),
+	main ul.side-by-side-right-flipped li:nth-child(2)
+	{
+		width: 100%;
+		padding-top: 100%;
+	}
+	
+	/* type */
+	main ul.side-by-side-left li:nth-child(2),
+	main ul.side-by-side-right li:first-child,
+	main ul.side-by-side-right-flipped li:first-child
+	{
+		width: 75%;
+	}
+	
+	main ul.side-by-side-left li:nth-child(2) p.body-text,
+	main ul.side-by-side-right li:first-child p.body-text,
+	main ul.side-by-side-right-flipped li.text-container
+	{
+		padding: 100px 5%;
+	}
+	
+	main ul.side-by-side-left li:first-child,
+	main ul.side-by-side-right li:first-child,
+	main ul.side-by-side-right-flipped li:first-child
+	{
+		margin: 0;
+	}
+	
+	.synopsis-section
+	{
+		margin-top: 0 !important;
+	}
+}
+
+/******************/
+/*    CONTACT     */
+/******************/
+
+/* Add a background color and some padding around the form */
+#contact-form
+{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 25px;
+	margin: 20px 0;
+	//display: inline-block;
+	float: left;
+	margin-right: 50px;
+	width: calc(100% - 700px);
+	
+	/* type */
+	font-family: Futura, serif;
+	font-size: 1em;
+    letter-spacing: 0.15em;
+    text-transform: lowercase;
+	color: #4eafaa;
+	align: left;
+}
+
+#contact-form img
+{
+	//width: calc(100% - 25px);
+	width: 100%;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], input[type=email], select, textarea 
+{
+    width: 100%; /* Full width */
+    padding: 10px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 5px; /* Add a top margin */
+    margin-bottom: 5px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+		
+	/* type */
+	font-family: Baskerville, "Times New Roman", "serif";
+	font-size: 1.25em;
+    font-weight: normal;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] 
+{
+	border: 0.15em solid #4eafaa;
+    border-radius: 0.5em;
+    height: 2em;
+    width: 200px;
+	
+    background-color: #ffffff;
+    color: #4eafaa;
+    cursor: pointer;
+	
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	
+	/* type */
+	font-family: Futura, serif;
+	font-size: 1em;
+    letter-spacing: 0.15em;
+    //line-height: 2em;
+    text-transform: lowercase;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* When moving the mouse over the submit button, lighten the color */
+input[type=submit]:hover 
+{
+	background-color: #4eafaa;
+	color: #ffffff;
+}
+
+div.wpcf7-mail-sent-ok 
+{
+    border: 2px solid #4eafaa;
+	padding: 25px;
+	text-align: center;
+}
+
+/******************/
+/*    PORTFOLIO   */
+/******************/
+
+main ul#gallery-section
+{
+	list-style: none;
+	height: 1em;
+	//margin: 0 10px 50px 10px;
+	margin: 0 auto 50px auto;
+	padding: 0;
+	display: table;
+}
+
+main ul#gallery-section li
+{
+	float: left;
+	padding: 0 25px;
+    text-align: center;
+	
+	display: table-cell;
+	vertical-align: middle;
+	
+	font-size: 1.25em;
+    line-height: 1em;
+    font-weight: normal;
+}
+
+main ul#gallery-section li:not(:first-child)
+{
+	border-left: 1px solid #e7ae4d;
+	//padding: 0 25px;
+}
+
+/* ul container for the portfolio items */
+main ul#gallery-section
+{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0;
+}
+
+/* portfolio item */
+main ul#gallery-section li
+{
+	float: left;
+    width: calc(100% / 3 - 21px);
+	padding: 0;
+	padding-top: calc(100% / 3 - 21px);
+	margin: 10px;
+	box-shadow: inset 0 0 5px #8E8E8E;
+	overflow: hidden;
+ 	position: relative;
+	transition: all 0.25s, width 0.5s ease, padding 0.5s ease;
+	background-size: cover;
+}
+
+/* before psuedos for background manipulations */
+main ul#gallery-section li::before,
+main ul#gallery-section li a::before
+{ 
+	content: "";
+	position: absolute; 
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+
+/* zoom into background image on hover */
+main ul#gallery-section li::before
+{
+	background: inherit;
+	transition: inherit;
+}
+
+/* manipulate scale */
+main ul#gallery-section li:hover::before 
+{ 
+	transform: scale(1.2);
+}
+
+/* special background color on hover */
+main ul#gallery-section li a::before
+{
+	//background-color: #100011;
+	opacity: 0;
+	z-index: 2;
+}
+
+/* change opacity on hover */
+main ul#gallery-section li a:hover::before 
+{ 
+	opacity: 0.65;
+}
+
+main ul#gallery-section li img
+{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	
+	object-fit: cover;
+}
+
+main ul li
+{
+	-webkit-transition: all 0.5s ease;
+	   -moz-transition: all 0.5s ease;
+	     -o-transition: all 0.5s ease;
+	    -ms-transition: all 0.5s ease;
+	        transition: all 0.5s ease;
+}
+
+/* change opacity on hover */
+main ul#gallery-section li a:hover img
+{
+	/* IE6-9 */
+	filter: gray;
+	
+	/* Google Chrome, Safari 6+ & Opera 15+ */
+	-webkit-filter: grayscale(1);
+	
+	/* Microsoft Edge and Firefox 35+ */
+	filter: grayscale(1);
+	
+	-webkit-transition: all 0.5s ease;
+	   -moz-transition: all 0.5s ease;
+	     -o-transition: all 0.5s ease;
+	    -ms-transition: all 0.5s ease;
+	        transition: all 0.5s ease;
+	
+	-webkit-transform: scale(1.5);
+	   -moz-transform: scale(1.5);
+	     -o-transform: scale(1.5);
+     	-ms-transform: scale(1.5);
+	        transform: scale(1.5);
+}
+
+/* stretch link */
+main ul#gallery-section li a,
+ul.three-across li a,
+.side-by-side-left li a,
+.side-by-side-right li a,
+.side-by-side-right-flipped li a
+{
+	position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+
+ul.three-across li,
+.side-by-side-left li,
+.side-by-side-right li,
+.side-by-side-right-flipped li
+{
+	position: relative;
+}
+
+/* content in the portfolio item */
+main ul#gallery-section li a .text
+{
+	height: 100%;
+	position: relative;
+	justify-content: center;
+    align-items: center;
+	text-align: center;
+	z-index: 2;
+	color: #ffffff;
+	
+	/* transitions */
+	display: flex;
+    visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.25s ease-in-out, font-size 0.5s ease;
+	-webkit-transition: visibility 0s, opacity 0.25s ease-in-out, font-size 0.5s ease;
+  	-moz-transition: visibility 0s, opacity 0.25s ease-in-out, font-size 0.5s ease;
+  	-o-transition: visibility 0s, opacity 0.25s ease-in-out, font-size 0.5s ease;
+	
+	/* type styles */
+	font-size: 2.5em;
+	line-height: 2.5em;
+	letter-spacing: 0.15em;
+}
+
+/* on hover, display it */
+main ul#gallery-section li:hover a .text
+{
+	visibility: visible;
+	opacity: 1;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	letter-spacing: 0.15em;
+}
+
+main ul#gallery-section li:hover a .text .body-text
+{
+	visibility: visible;
+	opacity: 1;
+	font-size: 0.5em;
+}
+
+/* ul for the single page's portfolio images */
+ul#port-images
+{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0;
+	padding: 0 0 100px 0;
+	list-style: none;
+	
+	display: flex;
+  	justify-content: flex-start;
+  	flex-direction: row;
+  	flex-wrap:wrap;
+}
+
+/* portfolio li */
+ul#port-images li
+{
+	width: 80%;
+	height: auto;
+	margin: 25px 10%;
+	float: left;
+}
+
+/* actual portfolio image */
+ul#port-images li img
+{
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	margin: 0 auto;		
+}
+
+/* Type Styles */
+
+main ul#gallery-section .header-display, h2 span.header-display
+{
+	text-transform: lowercase;
+	font-weight: bold;
+}
+
+/****************/
+/*    FOOTER    */
+/****************/
+
+/* sticky footer */
+footer
+{
+	/* 50px for the padding */
+	width: 100%;
+	height: 50px;
+	position: relative;
+	margin: 0 auto;
+	color: #ffffff;
+}
+
+/* information in the footer, ie name */
+#footer-info
+{
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	padding: 25px 0;
+	background-color: #100011;
+}
+
+/* social buttons in the footer */
+footer ul
+{
+	position: absolute;
+	right: 0;
+	top: 37.5px;
+	height: 50px;
+	margin: 0 auto;
+	list-style: none;
+}
+
+/* list item holding the image */
+footer ul li
+{
+	height: 35px;
+	width: 35px;
+	float: left;
+	margin-left: 10px;
+}
+
+/* actual social media icon */
+footer ul li img
+{
+	width: 35px;
+	height: 35px;
+}
+
+/* type styles */
+
+/* general footer type size */
+footer
+{
+	font-size: 0.7em;
+}
+
+/* footer info line height must be 1/3 of the 50 (three lines of type) */
+#footer-info
+{
+	line-height: calc(50px/3);
+}
+
+footer a.plain
+{
+	color: #ffffff;
+	border-bottom: 1px dotted #ffffff;
+}
+
+/****************/
+/* GENERAL TYPE */
+/****************/
+
+.header-display
+{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.body-text
+{
+	font-family: 'Open Sans', sans-serif;
+}
+
+/****************/
+/*  ANIMATIONS */
+/****************/
+
+/* button animations */
+.button, nav li, #instafeed li, #instafeed .overlay, #port-cats li
+{
+	-webkit-transition: all 0.5s ease;
+	   -moz-transition: all 0.5s ease;
+	     -o-transition: all 0.5s ease;
+	    -ms-transition: all 0.5s ease;
+	        transition: all 0.5s ease;
+}
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+@media all and (max-width: 1399px)
+{
+	/* change the font size of page */
+	html, body
+	{
+		font-size: 90%;
+	}
+	
+	/* create more space for navigation before it begins to stack */
+	nav ul li
+	{
+		padding: 0 15px;
+	}
+	
+	/* make the illustration area thinner so it doesn't run into the intro paragraph */
+	#design
+	{
+		width: 30%;
+	}
+	
+	#contact-form
+	{
+		width: 100%;
+	}
+	
+	/* about section */
+	
+	/* move selfie to the top */
+	#selfie
+	{
+		width: 100%;
+		
+		/* type styles */
+		font-size: 4em;
+		line-height: 1em;
+		letter-spacing: 0.1em;
+	}
+	
+	main:not(#single) #body
+	{
+		width: 100%;
+	}
+	
+	/* move intro to the bottom */
+	main #body
+	{
+		padding-top: 50px;
+		width: 100%;
+	}
+	
+	/* button underneath the body */	
+	main .button
+	{
+		left: 0;
+	}
+	
+	/* smaller input boxes for contact form */
+	input[type=text], input[type=email], select, textarea 
+	{
+		width: 90%;
+	}
+
+}
+
+@media all and (max-width: 799px)
+{
+	/* intro header */
+	main h1
+	{
+		font-size: 4em;
+		line-height: 2em;
+	}
+
+	/* body paragraph */
+	main h2
+	{
+		font-size: 1.75em;
+		line-height: 2em;
+	}
+
+	main p
+	{
+		font-size: 1.4em;
+		line-height: 2;
+	}
+	
+	main
+	{
+		width: calc(100vw - 4%);
+		padding: 50px 2%;
+	}
+	
+	.burger-menu
+	{
+		display: block;
+	}
+
+	/* change the font size of page */
+	html, body
+	{
+		font-size: 80%;
+	}
+	
+	/* stack the menu items */
+	nav
+	{
+		height: auto;
+		margin: 0 auto;
+		padding: 0;
+		width: 100%;
+	}
+
+	/* center the logo */
+	nav #logo
+	{
+		height: 100px;
+		float: none;
+		display: block;
+		margin: 0 auto;
+	}
+
+	/* add space between logo and menu */
+	nav ul
+	{
+		display: block;
+		width: 100%;
+		position: absolute;
+		z-index: 10;
+		height: auto;
+		float: none;
+		background-color: #100011;
+	}
+	
+	nav ul
+	{
+		display: none;
+	}
+
+	/* add space between each menu item */
+	nav ul li
+	{
+		display: block;
+		padding: 25px;;
+	}
+
+	/* new hover styles for nav */
+	
+	/* background color animation */
+	nav ul li:hover
+	{
+		background-color: #e7ae4d;
+		color: #ffffff;
+	}	
+
+	/* no more italic animation */
+	nav ul a:hover, a.button:hover
+	{
+		font-style: normal;
+	}
+
+	/* no more underline animation */
+	nav ul a:hover:before, a.button:hover:before
+	{
+		visibility: hidden;
+		-webkit-transform: none;
+		transform: none;
+	}
+	
+	/* buttons stack */	
+	main .button
+	{
+		left: 0;
+		position: relative;
+		margin-top: 25px;
+	}
+
+	/* buttons stack */
+	main .button:nth-last-of-type(2)
+	{
+		left: 0;
+		position: relative;
+	}
+	
+	main:not(#single) #body
+	{
+		padding: 0;
+	}
+	
+	
+	/* 2 portfolio items per row */
+	main ul#gallery-section li
+	{
+		width: calc(100% / 2 - 21px);
+		padding-top: calc(100% / 2 - 21px);
+	}
+	
+
+}
+
+@media all and (max-width: 499px)
+{
+	nav
+	{
+		height: 100px;
+	}
+//	nav #logo
+	{
+		width: 50%;
+		height: auto;
+   		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	nav ul
+	{
+		background-color: #100011;
+	}
+}
+
+nav
+	{
+		position: fixed;
+		z-index: 1;
+	}
+	
+	#wrapper
+	{
+		padding-top: 100px;
+	}
